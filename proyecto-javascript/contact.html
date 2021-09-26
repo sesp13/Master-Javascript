@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Javascript</title>
+    <!-- Hojas de estilo librerías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.css">
+
+    <!-- Hojas de estilos personalizadas -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link id="theme" rel="stylesheet" href="css/green.css">
+
+    <!-- scripts librerías-->
+    <!-- <script src="js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jquery.form-validator.min.js"></script>
+
+    <!-- scripts personalizados -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+
+</head>
+
+<body>
+
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+    </div>
+
+    <section id="global">
+        <!-- cabecera -->
+        <header>
+            <div id="logo">
+                <h1>Proyecto JS</h1>
+            </div>
+            <div class="clearfix"></div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="reloj.html">Reloj</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- fin cabecera -->
+
+        <!-- contenido -->
+        <section id="content">
+            <!-- Se añaden los archivos por json -->
+            <div id="box">
+                <h2>Contacto</h2>
+                <form action="" id="form-contact" method="POST">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" data-validation="alphanumeric">
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" id="surname" data-validation="alphanumeric">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" data-validation="email">
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" id="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                        <option value="reptilian">Repitiliano</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text" name="date" id="date" data-validation="date" data-validation-format="dd-mm-yyyy">
+                    
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" id="years" data-validation="number">
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>¿Quién soy?</span></h4>
+                    <img src="img/caracol.jpg" alt="Caracol">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur modi magnam nihil aliquam unde
+                        sequi laudantium? Iure, architecto. Commodi molestiae at quod ab saepe voluptatum vitae debitis
+                        quidem laudantium. Modi.</p>
+                </div>
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form action="">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="formName">
+                        <label for="email">Email</label>
+                        <input type="text" name="email">
+                        <label for="password">Contraseña</label>
+                        <input type="text" name="password">
+                        <input type="submit" name="name" value="Enviar">
+                    </form>
+                </div>
+
+            </aside>
+            <div class="clearfix"></div>
+        </section>
+        <!-- fin contenido -->
+    </section>
+    <!-- fin global -->
+
+    <footer>
+        Máster en Javascript
+        <a href="#" class="subir">Ir arriba</a>
+    </footer>
+
+</body>
+
+</html>

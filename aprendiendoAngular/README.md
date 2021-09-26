@@ -1,0 +1,1 @@
+Algunos elementos presentes mientras se tuvo los primeros pasos con angular
