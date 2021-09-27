@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -11,11 +11,19 @@ export class ContactComponent implements OnInit {
   public name: string;
   public autor: any;
 
+  @ViewChild('textos') textos;
+
   constructor() {
     this.name = 'Componente Padre manda saludos';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //Opcion clasica javascript
+    // console.log(document.querySelector('#texto'));
+
+    //Opcion viewChild
+    console.log(this.textos);
+  }
 
   cargarSlider() {
     this.anchuraToSlider = this.widthSlider;

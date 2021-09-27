@@ -1,6 +1,10 @@
 <h1>Contacto</h1>
 
-<input type="number" [(ngModel)]="widthSlider"  />
+<div id="texto" #textos>
+  <p [appResaltado]>Esta es la página de contacto puedes enviarnos cualquier dudas</p>
+</div>
+
+<!-- <input type="number" [(ngModel)]="widthSlider"  />
 
 <button (click)="cargarSlider()">Cargar</button>
 <button (click)="resetSlider()">Reset slider</button>
@@ -20,5 +24,4 @@
 
 <div *ngIf="anchuraToSlider">
   <app-slider [width]="anchuraToSlider" [name]="name" (conseguirAutor)="recogerAutor($event)"></app-slider>
-</div>
-
+</div> -->
