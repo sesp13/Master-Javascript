@@ -8,10 +8,18 @@ declare var $: any;
 })
 export class ContactComponent implements OnInit {
   constructor() {}
-  
+
   ngOnInit(): void {
-    $('#logo').click(function () {
-      $('header').css('background', 'green');
+    this.documentReady();
+  }
+
+  documentReady(): void {
+    $(document).ready(function () {
+      $('.slider').bxSlider();
+
+      $('#logo').click(function () {
+        alert('Hiciste click en el logo!');
+      });
     });
   }
 }
