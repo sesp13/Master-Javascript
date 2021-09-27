@@ -1,16 +1,24 @@
-<div class="slider">
-  <div>
-    <img
-      src="https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6ZAlQrGYxXi8Bo8PuhJd5g/206c57ecb27e58b4555089c6c80d3db5/ACV_meta.png"
-      alt=""
-    />
-    I am a slide.
-  </div>
-  <div>
-    <img
-      src="https://phantom-marca.unidadeditorial.es/512e542e1215b2b008997bab963ccc74/resize/1320/f/jpg/assets/multimedia/imagenes/2020/11/11/16051324587434.jpg"
-      alt=""
-    />
-    I am another slide.
-  </div>
+<h1>Contacto</h1>
+
+<input type="number" [(ngModel)]="widthSlider"  />
+
+<button (click)="cargarSlider()">Cargar</button>
+<button (click)="resetSlider()">Reset slider</button>
+
+<div *ngIf="autor">
+  <h2>Autor</h2>
+  <p>
+    Nombre: {{autor.nombre}}
+  </p>
+  <p>
+    Web: {{autor.web}}
+  </p>
+  <p>
+    LinkedIn: {{autor.linkedIn}}
+  </p>
 </div>
+
+<div *ngIf="anchuraToSlider">
+  <app-slider [width]="anchuraToSlider" [name]="name" (conseguirAutor)="recogerAutor($event)"></app-slider>
+</div>
+

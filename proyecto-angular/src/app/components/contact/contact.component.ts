@@ -1,25 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-//Jquery
-declare var $: any;
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  constructor() {}
+  public widthSlider: number;
+  public anchuraToSlider: number;
+  public name: string;
+  public autor: any;
 
-  ngOnInit(): void {
-    this.documentReady();
+  constructor() {
+    this.name = 'Componente Padre manda saludos';
   }
 
-  documentReady(): void {
-    $(document).ready(function () {
-      $('.slider').bxSlider();
+  ngOnInit(): void {}
 
-      $('#logo').click(function () {
-        alert('Hiciste click en el logo!');
-      });
-    });
+  cargarSlider() {
+    this.anchuraToSlider = this.widthSlider;
+  }
+
+  resetSlider() {
+    this.anchuraToSlider = null;
+  }
+
+  recogerAutor(event: any) {
+    this.autor = event;
   }
 }
